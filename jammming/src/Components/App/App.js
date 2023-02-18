@@ -1,22 +1,19 @@
 import './App.css';
-
+import { SearchBar } from '../SearchBar/SearchBar';
 function App() {
+
+  //  Add a SearchBar component
+  // Add a SearchResults component
+  //  <!-- Add a Playlist component -->
   return (
-    <div className="App">
-      <header className="App-header">
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+    <div>
+      <h1>Ja<span className="highlight">mmm</span>ing</h1>
+      <div className="App">
+        <SearchBar />
+        <div className="App-playlist">
+        </div>
+      </div>
+  </div>
   );
 }
 
