@@ -4,7 +4,7 @@ import "./TrackList.css";
 export class TrackList extends React.Component {
     
   render() {
-   //Console.log( this.props.searchResults )
+   console.log( this.props.tracks )
     return <div className="TrackList">
           </div>
   }
