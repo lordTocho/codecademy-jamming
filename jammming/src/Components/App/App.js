@@ -39,6 +39,9 @@ class App extends React.Component {
       ]
     };
   
+  } // end of constructor
+  addTrack(track) {
+
   }
   render() {
     return <div>
