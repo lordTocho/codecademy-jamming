@@ -42,14 +42,16 @@ class App extends React.Component {
     this.addTrack =  this.addTrack.bind(this); 
   
   } // end of constructor
-  addTrack(track) {
-    console.log( `Determining if ${track.id} is in the Playlist...` )
-    if( this.state.playlistTracks.find( findTrack => findTrack.id === track.id ) ) {
-      console.log( `Track found.` )
+  addTrack( track ){
+    if (this.state.playlistTracks.find(savedTrack => savedTrack.id === track.id)) {
+      return;
     }
-      console.log( `track not found. adding track id ${track.id} track artist ${track.artist} track album ${track.album}` )
-      return this.state.playlistTracks.push( track )
+  } 
+
+  removeTrack( track ) {
+    
   }
+
   render() {
     return <div>
         <h1>Ja<span className="highlight">mmm</span>ing</h1>
@@ -57,7 +59,7 @@ class App extends React.Component {
           <SearchBar />
           <div className="App-playlist">
             <SearchResults searchResults={this.state.searchResults} onAdd={this.addTrack}/>
-            <PlayList searchResults={this.state.searchResults} playlistName={this.state.playlistName} playlistTracks={this.state.playlistTracks}/>
+            <PlayList searchResults={this.state.searchResults} playlistName={this.state.playlistName} playlistTracks={this.state.playlistTracks} onAdd={this.addTrack}/>
           </div>
         </div>
     </div>
